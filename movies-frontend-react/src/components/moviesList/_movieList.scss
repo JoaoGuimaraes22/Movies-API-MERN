@@ -1,0 +1,29 @@
+.movieList {
+  padding-top: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+    .movie {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      &__title {
+        font-size: 1.3rem;
+        min-height: 5rem;
+      }
+      &__img-container {
+        width: 100%;
+        height: auto;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
