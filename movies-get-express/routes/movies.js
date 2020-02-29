@@ -19,7 +19,7 @@ router.get("/",/*auth (to be implemented), */(req, res, next) => {
             const db = client.db(dbName);
             db.collection("movies").find().toArray((e, d) => {
                 console.log(d.length);
-                data = d;
+                res.json(d);
 
             })
 
@@ -30,8 +30,6 @@ router.get("/",/*auth (to be implemented), */(req, res, next) => {
         client.close();
         console.log("Ended");
     })();
-    console.log("TEST");
-    res.json([{ _id: "testId", title: "test", img: "test.jpg", releaseDate: "testDate" }])
 })
 
 module.exports = router;

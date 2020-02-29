@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
 
-function App() {
+const App = () => {
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getMovies = async () => {
+      const response = await fetch("api/movies");
+      const data = await response.json();
+      setLoading(false);
+      setMovies(data);
+    }
+    getMovies();
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hellow World</h1>
+      <div>
+        {loading ? <div className=""><h1>Loading</h1></div> : <div className="">
+          {movies.map((mov) => { return (<div><h1>{mov.title}</h1></div>) })}
+        </div>}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
