@@ -33,8 +33,8 @@ const MovieList = () => {
                     ? mov.title
                     : `${mov.title.substring(0, 40)}...`}
                 </h1>
-                <h4 className="movie__date">{mov.releaseDate}</h4>
-                <p className="movie__rating">{mov.rating}</p>
+                <h4 className="movie__date">Released in {mov.releaseDate}</h4>
+                <p className="movie__rating">Rating: {mov.rating}</p>
               </div>
             );
           })}
