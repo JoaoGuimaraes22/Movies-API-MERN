@@ -48,14 +48,13 @@ body {
 }
 
 .movieList .movie-grid .movie__title {
-  font-size: 1.2rem;
-  min-height: 3.8rem;
+  font-size: 1.4rem;
 }
 
 .movieList .movie-grid .movie__img-container {
   width: 100%;
-  margin-top: 1rem;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 .movieList .movie-grid .movie__img-container img {
