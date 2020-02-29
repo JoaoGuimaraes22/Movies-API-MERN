@@ -1,19 +1,19 @@
 .movieList {
   padding-top: 2rem;
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
   .movie-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 10px;
-    row-gap: 30px;
+    column-gap: 25px;
+    row-gap: 70px;
     .movie {
       display: flex;
       justify-content: center;
       flex-direction: column;
       &__title {
-        font-size: 1.4rem;
-        min-height: 4.4rem;
+        font-size: 1.2rem;
+        min-height: 3.8rem;
       }
       &__img-container {
         width: 100%;
