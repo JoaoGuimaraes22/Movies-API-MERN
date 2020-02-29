@@ -25,7 +25,7 @@ const MovieList = () => {
           {movies.map(mov => {
             return (
               <div className="movie" key={mov._id}>
-                <h1 className="movie__title">{mov.title}</h1>
+                <h1 className="movie__title">{mov.title.substring(0, 47)}</h1>
                 <div className="movie__img-container">
                   <img src={mov.img} alt={mov.title} className=""></img>
                 </div>
