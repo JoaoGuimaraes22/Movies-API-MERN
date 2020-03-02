@@ -20,8 +20,23 @@ const MovieList = ({ url }) => {
   return (
     <div className="movieList">
       {loading ? (
-        <div className="">
-          <h1>Loading</h1>
+        <div className="loader">
+          <div className="loadingio-spinner-spinner-mob15g72a9c">
+            <div className="ldio-37kf75nqm8a">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
       ) : (
         <div className="movie-grid">

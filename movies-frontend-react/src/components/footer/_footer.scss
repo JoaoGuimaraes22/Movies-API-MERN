@@ -1,0 +1,40 @@
+.footer {
+  padding: 1rem 0;
+  background: rgb(58, 57, 57);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid #777777;
+  &__init-text {
+    padding-top: 1rem;
+    span {
+      color: #e21a38;
+    }
+  }
+  &__socials {
+    padding-top: 1.6rem;
+    padding-bottom: 0.5rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .item {
+      font-size: 1.4rem;
+      margin: 0 2rem;
+      &__link {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+    .item:hover {
+      transition: 0.6s all;
+      transform: translateY(-5px);
+    }
+
+    .item:hover > .item__link {
+      transition: 1s all;
+      color: #e21a38;
+    }
+  }
+}
