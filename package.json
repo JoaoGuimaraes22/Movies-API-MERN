@@ -1,0 +1,26 @@
+{
+  "name": "movies-api-mern",
+  "version": "1.0.0",
+  "description": "Made with MongoDB with CRON and NodeJS, Express and React.",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd movies-frontend-react && npm run start",
+    "server-get": "cd movies-get-express && npm run start",
+    "server-get-dev": "cd movies-get-express && npm run server",
+    "server-insert": "cd movies-insert-mongo && npm run start",
+    "dev": "concurrently \"npm run client\" \"npm run server-get-dev\"",
+    "dev-all": "concurrently \"npm run client\" \"npm run server-get-dev\" \"npm run server-insert\"",
+    "prod": "concurrently \"npm run client\" \"npm run server-get\" \"npm run server-insert\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoGuimaraes22/Movies-API-MERN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoaoGuimaraes22/Movies-API-MERN/issues"
+  },
+  "homepage": "https://github.com/JoaoGuimaraes22/Movies-API-MERN#readme"
+}
