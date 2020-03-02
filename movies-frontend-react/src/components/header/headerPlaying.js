@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaArrowDown } from "react-icons/fa";
 
 const HeaderPlaying = () => {
   return (
     <header className="header">
       <nav className="navbar">
         <h1 className="navbar__title">
-          <a href="/">Featured Movies</a>
+          <a href="/">
+            Featured Movies{" "}
+            <FaArrowDown
+              style={{ color: "#fff", fontSize: "2rem" }}
+              className="fa-arr"
+            />
+          </a>
         </h1>
         <ul className="navbar__list">
           <li className="navbar__list__item">

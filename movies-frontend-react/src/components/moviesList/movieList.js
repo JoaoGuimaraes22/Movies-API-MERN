@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const MovieList = ({ url }) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const MySwal = withReactContent(Swal);
 
   useEffect(() => {
     const getMovies = async () => {
@@ -35,7 +38,32 @@ const MovieList = ({ url }) => {
                 </h1>
                 <h4 className="movie__date">Released in {mov.releaseDate}</h4>
                 <p className="movie__rating">Rating: {mov.rating}</p>
-                <a className="movie__see-more">See more</a>
+                <p
+                  className="movie__see-more"
+                  onClick={() => {
+                    MySwal.fire({
+                      title: <h3>{mov.title}</h3>,
+                      html: (
+                        <div style={{ paddingTop: "1rem" }}>
+                          <p>{mov.desc}</p>
+                          <p
+                            style={{
+                              color: "#777777",
+                              paddingTop: "1rem",
+                              fontSize: "0.9rem"
+                            }}
+                          >
+                            Rating: {mov.rating}
+                          </p>
+                        </div>
+                      ),
+                      footer: `Release date: ${mov.releaseDate}`,
+                      confirmButtonColor: "#e21a38"
+                    });
+                  }}
+                >
+                  See more
+                </p>
               </div>
             );
           })}

@@ -103,6 +103,8 @@ body {
 
 .movieList .movie-grid .movie__see-more:hover {
   background: #b7142c;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 .header {
@@ -137,6 +139,25 @@ body {
   color: white;
 }
 
+.header .navbar__title .fa-arr {
+  color: white;
+  font-size: 2rem;
+}
+
+.header .navbar__title a:hover > .fa-arr {
+  color: #e21a38;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.header .navbar__title a:hover {
+  color: #bdbcbc;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
 .header .navbar__list {
   list-style: none;
   display: -webkit-box;
@@ -168,7 +189,7 @@ body {
 .header .navbar__list__item .link:hover {
   -webkit-transition: 0.7s all;
   transition: 0.7s all;
-  color: #7799d8;
+  color: #ff1f41;
 }
 
 .movie-section {
