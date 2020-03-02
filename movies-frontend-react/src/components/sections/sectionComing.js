@@ -6,7 +6,7 @@ const SectionComing = () => {
   return (
     <div>
       <HeaderComing />
-      <MovieSection url="/api/movies" />
+      <MovieSection url="/api/movies-upcoming" />
     </div>
   );
 };

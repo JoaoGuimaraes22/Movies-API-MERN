@@ -6,7 +6,7 @@ const SectionPopular = () => {
   return (
     <div>
       <HeaderPopular />
-      <MovieSection url="/api/movies" />
+      <MovieSection url="/api/movies-popular" />
     </div>
   );
 };
