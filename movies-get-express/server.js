@@ -4,7 +4,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-app.use("/api/movies", require("./routes/movies"));
+app.use("/api/movies-popular", require("./routes/movies-popular"));
+app.use("/api/movies-upcoming", require("./routes/movies-upcoming"));
+app.use("/api/movies-playing", require("./routes/movies-playing"));
 
 const port = 5000 || process.env.PORT;
 

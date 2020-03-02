@@ -1,5 +1,7 @@
 const axios = require("axios");
 
+const api_key = require("../keys/keys").apiKey;
+
 const fetchData = async (url) => {
   const response = await axios.get(url);
   const data = await response.data;
@@ -18,13 +20,13 @@ const fetchData = async (url) => {
 
 const movies = async () => {
   const resultsOne = await fetchData(
-    "https://api.themoviedb.org/3/discover/movie?api_key=5b4370c03491f16a07e646d7956677b7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1"
+    `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`
   );
   const resultsTwo = await fetchData(
-    "https://api.themoviedb.org/3/discover/movie?api_key=5b4370c03491f16a07e646d7956677b7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=2"
+    `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=2`
   );
   const results = [...resultsOne, ...resultsTwo];
-  return results
+  return results;
 };
 
 module.exports = movies;
