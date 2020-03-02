@@ -1,12 +1,18 @@
 import React from "react";
-import MovieList from "./components/moviesList/movieList";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SectionPopular from "./components/sections/sectionPopular";
+import SectionPlaying from "./components/sections/sectionPlaying";
+import SectionComing from "./components/sections/sectionComing";
 
 const App = () => {
   return (
-    <div className="app">
-      <h1>Hellow World</h1>
-      <MovieList />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={SectionPopular}></Route>
+        <Route exact path="/playing" component={SectionPlaying}></Route>
+        <Route exact path="/coming" component={SectionComing}></Route>
+      </Switch>
+    </Router>
   );
 };
 

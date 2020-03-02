@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-const MovieList = () => {
+const MovieList = ({ url }) => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getMovies = async () => {
-      const response = await fetch("api/movies");
+      const response = await fetch(url);
       const data = await response.json();
       setLoading(false);
       setMovies(data);
     };
     getMovies();
-  }, []);
+  }, [url]);
 
   return (
     <div className="movieList">
@@ -22,7 +22,7 @@ const MovieList = () => {
         </div>
       ) : (
         <div className="movie-grid">
-          {movies.map(mov => {
+          {movies.map((mov) => {
             return (
               <div className="movie" key={mov._id}>
                 <div className="movie__img-container">
