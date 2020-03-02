@@ -36,6 +36,22 @@ body {
   row-gap: 60px;
 }
 
+.movieList .movie-grid .movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
 .movieList .movie-grid .movie__title {
   font-size: 1rem;
 }
@@ -71,6 +87,22 @@ body {
   color: #777777;
   font-style: Roboto;
   font-size: 0.87rem;
+}
+
+.movieList .movie-grid .movie__see-more {
+  margin-top: 0.7rem;
+  background-color: #e21a38;
+  font-size: 0.95rem;
+  border-radius: 38px;
+  padding: 0.8rem 1.85rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.movieList .movie-grid .movie__see-more:hover {
+  background: #b7142c;
 }
 
 .header {
@@ -130,6 +162,7 @@ body {
 .header .navbar__list__item .curr-link {
   color: #fff;
   text-decoration: underline;
+  font-weight: 900;
 }
 
 .header .navbar__list__item .link:hover {

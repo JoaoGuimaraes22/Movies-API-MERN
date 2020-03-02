@@ -9,6 +9,10 @@
     column-gap: 20px;
     row-gap: 60px;
     .movie {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
       &__title {
         font-size: 1rem;
       }
@@ -37,6 +41,20 @@
         color: $l-dark;
         font-style: Roboto;
         font-size: 0.87rem;
+      }
+      &__see-more {
+        margin-top: 0.7rem;
+        background-color: #e21a38;
+        font-size: 0.95rem;
+        border-radius: 38px;
+        padding: 0.8rem 1.85rem;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+      &__see-more:hover {
+        background: #b7142c;
       }
     }
   }

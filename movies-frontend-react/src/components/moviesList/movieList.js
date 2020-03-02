@@ -35,6 +35,7 @@ const MovieList = ({ url }) => {
                 </h1>
                 <h4 className="movie__date">Released in {mov.releaseDate}</h4>
                 <p className="movie__rating">Rating: {mov.rating}</p>
+                <a className="movie__see-more">See more</a>
               </div>
             );
           })}
